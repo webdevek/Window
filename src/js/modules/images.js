@@ -3,7 +3,7 @@ const images = () => {
     const imgPopup = document.createElement('div'),
         workSection = document.querySelector('.works'),
         bigImage = document.createElement('img');
-    imgPopup.classList.add('popup');
+    imgPopup.classList.add('popup_img');
     workSection.appendChild(imgPopup);
 
     imgPopup.style.justifyContent = 'center';
@@ -22,7 +22,7 @@ const images = () => {
             const path = target.parentNode.getAttribute('href');
             bigImage.setAttribute('src', path);
         }
-        if (target && target.matches('div.popup')) {
+        if (target && target.matches('div.popup_img')) {
             imgPopup.style.display = 'none';
         }
     })
